@@ -7,7 +7,7 @@ node{
     stage('compile-package'){
         // getting maven home path
 
-        sh "usr/bin/mvn package"
+        sh "/usr/bin/mvn package"
     }
 
 
