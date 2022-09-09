@@ -9,6 +9,11 @@ node{
 
         sh "/usr/bin/mvn package"
     }
+    stage('SonarQube Analysis') {
+        withSonarQubeEnv('sonar-1') { 
+          sh "/sur/bin/mvn sonar:sonar"
+        }
+    }
 
 
 }
