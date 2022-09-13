@@ -1,8 +1,5 @@
 pipeline {
     agent { label 'Linux'}
-    options {
-        buildDiscarder(logRotator(numToKeeoStr: '5'))
-    }
     stages {
         stage('Scan') {
             steps {
