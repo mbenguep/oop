@@ -18,7 +18,7 @@ node{
     stage('SonarQube Analysis') {
         echo 'Code Quality'
         withSonarQubeEnv(installationName: 'sonar-2') { 
-          sh "/usr/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.1.83:9000 -Dsonar.login=a4498d4b7bad5410e18032a077838e986c7492f7"
+          sh "/usr/bin/mvn sonar:sonar"
         }
     }
 
