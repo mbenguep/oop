@@ -22,21 +22,6 @@
     </dependency>
 
   </dependencies>
-<profiles>
-  <profile>
-    <id>sonar</id>
-  <activation>
-    <activeByDefault>true</activeByDefault>
-  </activation>
-  <properties>
-  <!-- Optional URL to server. Default value is http://localhost:9000 -->
-  <sonar.host.url>
-  http://192.168.1.83:9000
-  </sonar.host.url>
-  </properties>
-  </profile>
-</profiles>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
