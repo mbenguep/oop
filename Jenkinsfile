@@ -18,7 +18,7 @@ node{
     stage('SonarQube Analysis') {
         echo 'Code Quality'
         withSonarQubeEnv(installationName: 'sonar-2') { 
-          sh "/usr/bin/mvn clean verify"
+          sh "/usr/bin/mvn clean verify sonar"
         }
     }
 
