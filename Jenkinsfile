@@ -18,7 +18,7 @@ node{
     stage('SonarQube Analysis') {
         echo 'Code Quality'
         withSonarQubeEnv(installationName: 'sonar-2') { 
-          sh "/usr/bin/mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar"
+          sh "/usr/bin/mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
         }
     }
 
