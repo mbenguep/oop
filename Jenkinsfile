@@ -11,14 +11,14 @@ node{
     }
     stage('SonarQube updates') {
         echo 'Code Quality'
-        withSonarQubeEnv(installationName: 'sonar-2') { 
+        withSonarQubeEnv('sonar-2') { 
           sh "/usr/bin/mvn versions:display-plugin-updates"
         }
     }
     stage('SonarQube Analysis') {
         echo 'Code Quality'
-        withSonarQubeEnv(installationName: 'sonar-2') { 
-          sh "/usr/bin/mvn -e sonar:sonar"
+        withSonarQubeEnv('sonar-2') { 
+          sh "/usr/bin/mvn sonar:sonar"
         }
     }
 
