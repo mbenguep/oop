@@ -7,18 +7,18 @@ node{
     stage('compile-package'){
         // getting maven home path
 
-        sh "/usr/bin/mvn package"
+        sh "mvn package"
     }
     stage('SonarQube updates') {
         echo 'Code Quality'
         withSonarQubeEnv('sonar-2') { 
-          sh "/usr/bin/mvn versions:display-plugin-updates"
+          sh "mvn versions:display-plugin-updates"
         }
     }
     stage('SonarQube Analysis') {
         echo 'Code Quality'
         withSonarQubeEnv('sonar-2') { 
-          sh "/usr/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.1.83:9000 "
+          sh "mvn sonar:sonar -Dsonar.host.url=http://192.168.1.83:9000"
         }
     }
 
