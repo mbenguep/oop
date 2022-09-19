@@ -18,7 +18,7 @@ node{
     stage('SonarQube Analysis') {
         echo 'Code Quality'
         withSonarQubeEnv('sonar-2') { 
-          sh "/usr/bin/mvn org.codehaus.mojo:sonar-maven-plugin:2.0-beta-2:sonar"
+          sh "/usr/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.1.83:9000 "
         }
     }
 
