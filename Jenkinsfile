@@ -7,7 +7,7 @@ node{
     stage('compile-package'){
         // getting maven home path
 
-        sh "java --version"
+        sh "env"
     }
     stage('SonarQube updates') {
         echo 'Code Quality'
