@@ -27,6 +27,11 @@
   </properties>
   <build>
     <plugins>
+    <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.0.2</version>
+</plugin>
       <plugin>
         <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
